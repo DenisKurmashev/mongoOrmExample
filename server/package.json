@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Example of using mongo orm",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisKurmashev/mongoOrmExample.git"
+  },
+  "author": "Denis Kurmashev & Vladimir Kudelko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisKurmashev/mongoOrmExample/issues"
+  },
+  "homepage": "https://github.com/DenisKurmashev/mongoOrmExample#readme"
+}
