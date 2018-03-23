@@ -15,6 +15,7 @@ function find(req, res) {
 		} catch(e) {
 			return sendError(res);
 		}
+		res.statusCode = 200;
 		res.end(responseText);
 	});
 }
