@@ -1,5 +1,5 @@
 (function(d) {
-    const API     = 'http://127.0.0.1:3000',
+    const API     = 'https://mongoormexample.herokuapp.com',
           FIND    = '/find',
           INSERT  = '/insert',
           UPDATE  = '/update',
