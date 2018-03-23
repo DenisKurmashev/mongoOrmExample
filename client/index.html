@@ -11,9 +11,33 @@
     <input type="button" value="find" id="findBtn">
     <input type="button" value="insert" id="insertBtn">
     <input type="button" value="update" id="updateBtn">
-    <input type="button" value="delete" id="deleteBtn">
     <input type="button" value="get backup" id="backUpBtn">
 
+    <form id="insertTxt">
+        <input type="text" name="name" placeholder="name">
+        <input type="number" name="age" > 
+        <input type="text" name="country" >
+        <input type="text" name="phone" >
+        <input type="text" name="type" >
+    </form>
+
+    <hr>
+    <form id="updateTxt">
+        <input type="text" name="id" >
+        <input type="text" name="key" > 
+        <input type="text" name="value" >
+    </form>
+    <hr>
+
+    <div id="printResult" style="display:flex">
+
+    </div>
+
+    <div id="jsonBackUp">
+        
+    </div>
+
+    <script src="js/print.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
