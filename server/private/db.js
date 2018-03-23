@@ -1,4 +1,5 @@
-var DB = require('mongodb').MongoClient;
+const DB = require('mongodb').MongoClient,
+      config = require('../config/config');
 
 /**
  * Function for connect to MongoDB
@@ -6,7 +7,7 @@ var DB = require('mongodb').MongoClient;
  * @param {function} callBack callback for work after connect 
  */
 async function Connect(dbName, callBack) {
-    var url = 'mongodb://localhost:27017';
+    var url = config.dbUrl;
     await DB.connect(url, async (err, client) => {
         if (err) return console.log('DB not connect! ' + err.toString());
         await callBack(client.db(dbName));
@@ -206,7 +207,7 @@ function UpdateOne(_db, coll, predic, updateValue, userFunc = null) {
  * @param {string} db database name 
  * @param {string} path path to file 
  */
-function SaveDB(db, path) {
+function SaveDB(db, path, cb) {
     let DBObject = {},
         coll = [],
         dbName = db,
@@ -248,7 +249,10 @@ function SaveDB(db, path) {
     function SaveToFile(result) {
         fs.writeFile(path, JSON.stringify(result), (err) => {
             if (err) return console.log(err);
-            else console.log('backup is create');
+            else {
+                console.log('backup is create');
+                if (cb != null) cb();
+            }
         });
     }
 } 

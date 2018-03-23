@@ -1,5 +1,6 @@
 {
-    "dbUrl": "",
+    "dbUrl": "mongodb://localhost:27017",
     "dbName": "orm",
+    "backupPath": "/backup/backup.json",
     "port": 3000
 }

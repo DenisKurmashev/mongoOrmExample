@@ -8,7 +8,8 @@ let app = http.createServer((req, res) => {
     if (req.url === '/find') func.find(req, res);
     else if (req.url === '/insert') func.insert(req, res);
     else if (req.url === '/update') func.update(req, res);
-    else if (req.url === '/deleteOne') func.deleteOne(req, res);
+    else if (~req.url.indexOf('/deleteOne')) func.deleteOne(req, res);
+    else if (req.url === '/getBackUp') func.makeBackup(req, res);
     else res.end('404');
 });
 
