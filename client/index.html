@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <title>ORM</title>
 </head>
 <body>
 
-    <input type="button" value="find" id="findBtn">
-    <input type="button" value="insert" id="insertBtn">
-    <input type="button" value="update" id="updateBtn">
-    <input type="button" value="get backup" id="backUpBtn">
+    <div class="container">
+        <div class="row center-align">
+            <div class="col s12"><a class="waves-effect waves-light btn" id="findBtn">find</a></div>
+        </div>
+        <div class="row center-align">
+            <div class="col s12"><a class="waves-effect waves-light btn" id="insertBtn">insert</a></div>
+        </div>
+        <div class="row center-align">
+            <div class="col s12"><a class="waves-effect waves-light btn" id="updateBtn">update</a></div>
+        </div>
+        <div class="row center-align">
+            <div class="col s12"><a class="waves-effect waves-light btn" id="backUpBtn">get backup</a></div>
+        </div>
+    </div>
 
-    <form id="insertTxt">
-        <input type="text" name="name" placeholder="name">
-        <input type="number" name="age" > 
-        <input type="text" name="country" >
-        <input type="text" name="phone" >
-        <input type="text" name="type" >
-    </form>
-
-    <hr>
-    <form id="updateTxt">
-        <input type="text" name="id" >
-        <input type="text" name="key" > 
-        <input type="text" name="value" >
-    </form>
-    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <form id="insertTxt">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="number" name="age" placeholder="Age"> 
+                    <input type="text" name="country" placeholder="Country">
+                    <input type="text" name="phone" placeholder="Phone">
+                    <input type="text" name="type" placeholder="Type">
+                </form>
+            </div>
+            <div class="col s6">
+                <form id="updateTxt">
+                    <input type="text" name="id" placeholder="Id">
+                    <input type="text" name="key" placeholder="Key"> 
+                    <input type="text" name="value" placeholder="Value">
+                </form>
+            </div>
+        </div>
+    </div>
+    
 
     <div id="printResult" style="display:flex">
 
@@ -37,6 +55,8 @@
         
     </div>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/print.js"></script>
     <script src="js/main.js"></script>
 </body>

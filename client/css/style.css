@@ -1,0 +1,7 @@
+body {
+    width: 100%;
+    background-image: url('../img/db.jpg');
+    background-size: cover;
+}
+.btn:first-child { margin-top: 10px; }
+.btn { width: 250px; }
